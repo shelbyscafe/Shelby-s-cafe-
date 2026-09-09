@@ -10,20 +10,11 @@
 
 <title>Cafe Shelby</title>
 
-
-<!-- =========================================
-     CLASSIC FONTS
-========================================= -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@500;600;700&display=swap"
       rel="stylesheet">
-
 
 <style>
 
@@ -35,57 +26,56 @@
     box-sizing: border-box;
 }
 
-
 body {
-
     margin: 0;
-
     min-height: 100vh;
 
     background:
-        radial-gradient(
-            circle at center,
-            #252116 0%,
-            #111111 55%,
-            #080808 100%
-        );
+        radial-gradient(circle at center,
+        #252116 0%,
+        #111 45%,
+        #080808 100%);
 
-    color: #e8d7a8;
+    color: #eee4c8;
 
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
+    font-family: "Amiri", Tahoma, serif;
 
     text-align: center;
 }
 
 
 /* =========================================
-   MAIN FRAME
+   MAIN CONTAINER
 ========================================= */
 
 .container {
 
-    width: calc(100% - 30px);
-
+    width: 92%;
     max-width: 650px;
 
-    min-height: calc(100vh - 30px);
+    margin: 35px auto;
 
-    margin: 15px auto;
+    padding: 30px 22px 35px;
 
-    padding: 50px 25px;
-
-    border: 1px solid #a88a4a;
-
-    outline: 1px solid #4d4028;
-
-    outline-offset: 7px;
+    border: 1px solid #b59a5a;
 
     position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.88),
+            rgba(10,10,10,.95)
+        );
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,.8),
+        inset 0 0 20px rgba(181,154,90,.08);
 }
 
+
+/* =========================================
+   VINTAGE INNER FRAME
+========================================= */
 
 .container::before {
 
@@ -93,14 +83,12 @@ body {
 
     position: absolute;
 
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    top: 9px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
 
-    border:
-        1px solid
-        rgba(168,138,74,.35);
+    border: 1px solid rgba(181,154,90,.45);
 
     pointer-events: none;
 }
@@ -112,72 +100,44 @@ body {
 
 h1 {
 
-    font-family:
-        "Cinzel",
-        "Times New Roman",
-        serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
-    font-weight: 600;
+    color: #d4b66b;
 
-    font-size: 40px;
+    font-family: "Cinzel", serif;
 
-    letter-spacing: 4px;
+    font-size: 38px;
 
-    margin: 15px 0 8px;
+    letter-spacing: 3px;
 
-    color: #e8d7a8;
+    text-shadow:
+        0 0 10px rgba(212,182,107,.15);
 }
-
 
 h2 {
 
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
+    color: #d4b66b;
 
-    font-weight: 700;
+    font-size: 25px;
 
-    font-size: 29px;
-
-    margin: 15px 0 20px;
-
-    color: #e8d7a8;
+    margin-top: 10px;
 }
 
+h3 {
 
-p {
+    color: #d4b66b;
 
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
-
-    font-size: 18px;
-
-    color: #c7b993;
-
-    line-height: 2;
+    font-size: 21px;
 }
 
+.subtitle {
 
-.shelby-line {
+    color: #aaa;
 
-    width: 150px;
+    font-size: 16px;
 
-    height: 1px;
-
-    background: #a88a4a;
-
-    margin: 20px auto;
-}
-
-
-.welcome {
-
-    font-size: 20px;
-
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 
@@ -185,94 +145,119 @@ p {
    BUTTONS
 ========================================= */
 
-.main-button,
-.option {
+button {
+
+    width: 90%;
+
+    margin: 8px auto;
+
+    padding: 13px 18px;
 
     display: block;
-
-    width: 100%;
-
-    margin: 16px 0;
-
-    padding: 20px 15px;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(70,60,40,.35),
-            rgba(10,10,10,.9)
+            180deg,
+            #201e19,
+            #111
         );
 
-    color: #e8d7a8;
+    color: #eee4c8;
 
-    border:
-        1px solid #8c7441;
+    border: 1px solid #9d8449;
 
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
+    font-family: "Amiri", Tahoma, serif;
 
-    font-size: 18px;
+    font-size: 17px;
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: .25s;
+
+    box-shadow:
+        inset 0 0 8px rgba(181,154,90,.08);
 }
 
+button:hover {
 
-.main-button {
+    background: #2a261d;
 
-    padding: 24px 15px;
-}
+    color: #d9bd70;
 
+    border-color: #d4b66b;
 
-.main-button:hover,
-.option:hover {
+    transform: scale(1.02);
 
-    background: #e8d7a8;
-
-    color: #111;
-
-    border-color: #e8d7a8;
-
-    transform:
-        translateY(-2px);
-}
-
-
-/* =========================================
-   ICON
-========================================= */
-
-.icon {
-
-    display: block;
-
-    font-size: 30px;
-
-    margin-bottom: 8px;
+    box-shadow:
+        0 0 15px rgba(181,154,90,.15);
 }
 
 
 /* =========================================
-   QUESTION NUMBER
+   HOME BUTTONS
 ========================================= */
 
-.question-number {
+.home-button {
 
-    font-family:
-        "Cinzel",
-        "Amiri",
-        serif;
+    padding: 16px;
 
-    font-size: 13px;
+    font-size: 19px;
 
-    color: #8d7950;
+    margin: 12px auto;
+}
 
-    letter-spacing: 2px;
 
-    margin-bottom: 10px;
+/* =========================================
+   MENU
+========================================= */
+
+.menu-category {
+
+    margin-top: 25px;
+
+    padding-bottom: 5px;
+
+    border-bottom:
+        1px solid rgba(181,154,90,.3);
+}
+
+.menu-category h3 {
+
+    margin-bottom: 15px;
+}
+
+.menu-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 5px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    font-size: 16px;
+}
+
+.menu-item:last-child {
+
+    border-bottom: none;
+}
+
+.price {
+
+    color: #d4b66b;
+
+    direction: ltr;
+
+    white-space: nowrap;
+
+    font-family: Georgia, serif;
 }
 
 
@@ -282,81 +267,55 @@ p {
 
 .back-button {
 
-    margin-top: 30px;
+    margin-top: 25px;
 
-    color: #a89872;
+    width: 65%;
 
-    border-color: #5d4d31;
+    font-size: 16px;
 }
 
 
 /* =========================================
-   MENU
+   INSTAGRAM
 ========================================= */
 
-.menu-box {
+.instagram-box {
 
-    border:
-        1px solid #806b3f;
+    padding: 25px 10px;
+}
 
-    padding: 25px 18px;
+.instagram-title {
+
+    font-family: "Cinzel", serif;
+
+    color: #d4b66b;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   BUILDER
+========================================= */
+
+.question {
+
+    color: #eee4c8;
+
+    font-size: 23px;
 
     margin: 20px 0;
 }
 
+.progress {
 
-.menu-item {
+    color: #9e906f;
 
-    padding: 18px 5px;
+    font-size: 14px;
 
-    border-bottom:
-        1px solid #443a29;
-
-    text-align: center;
-}
-
-
-.menu-item:last-child {
-
-    border-bottom: none;
-}
-
-
-.menu-item-name {
-
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
-
-    font-size: 19px;
-
-    color: #e8d7a8;
-}
-
-
-/* =========================================
-   PRICE
-========================================= */
-
-.menu-price {
-
-    direction: ltr;
-
-    display: block;
-
-    margin-top: 8px;
-
-    font-family:
-        "Cinzel",
-        "Times New Roman",
-        serif;
-
-    font-size: 18px;
-
-    letter-spacing: 1px;
-
-    color: #c9a85c;
+    margin-bottom: 15px;
 }
 
 
@@ -364,155 +323,67 @@ p {
    RESULT
 ========================================= */
 
-.result {
-
-    border:
-        1px solid #a88a4a;
-
-    padding: 25px;
+.result-box {
 
     margin-top: 25px;
 
-    text-align: right;
-}
-
-
-.result p {
-
-    margin: 8px 0;
-
-    font-size: 16px;
-}
-
-
-.result strong {
-
-    color: #e8d7a8;
-}
-
-
-/* =========================================
-   SECRET FLOATING BUTTON
-========================================= */
-
-.secret-floating-button {
-
-    position: fixed;
-
-    bottom: 25px;
-
-    left: 25px;
-
-    width: 58px;
-
-    height: 58px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            #302918,
-            #0c0c0c
-        );
-
-    color: #e8d7a8;
+    padding: 20px;
 
     border:
-        1px solid #a88a4a;
+        1px solid #a98d4f;
 
-    font-size: 25px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 0 15px
-        rgba(168,138,74,.25);
-
-    z-index: 999;
-
-    transition: .3s;
+    background:
+        rgba(181,154,90,.04);
 }
 
+.result-title {
 
-.secret-floating-button:hover {
+    color: #d4b66b;
 
-    transform:
-        rotate(-8deg)
-        scale(1.08);
+    font-size: 27px;
+}
 
-    background: #e8d7a8;
+.result-text {
 
-    color: #111;
+    color: #ddd;
 
-    box-shadow:
-        0 0 25px
-        rgba(232,215,168,.35);
+    font-size: 17px;
+
+    line-height: 2;
 }
 
 
 /* =========================================
-   SECRET MENU
+   SECRET SHELBY
 ========================================= */
 
-.secret-reveal {
+.secret-box {
 
-    animation:
-        secretAppear .7s ease forwards;
-
-    padding: 35px 15px;
+    padding: 25px 10px;
 }
 
+.secret-title {
 
-.secret-symbol {
+    font-family: "Cinzel", serif;
 
-    font-size: 55px;
+    color: #d4b66b;
 
-    margin-bottom: 15px;
+    font-size: 30px;
 
-    animation:
-        hatAppear 1s ease;
+    letter-spacing: 2px;
 }
 
+.secret-drink {
 
-.secret-drink-name {
+    font-size: 27px;
 
-    font-family:
-        "Amiri",
-        "Times New Roman",
-        serif;
+    color: #eee4c8;
 
-    font-weight: 700;
-
-    font-size: 34px;
-
-    color: #e8d7a8;
-
-    margin: 25px 0 15px;
-
-    letter-spacing: 1px;
+    margin: 25px 0;
 
     animation:
-        drinkAppear 1s ease;
+        secretAppear .5s ease;
 }
-
-
-.secret-message {
-
-    color: #a89872;
-
-    font-size: 16px;
-
-    margin: 20px 0 35px;
-
-    animation:
-        messageAppear 1.5s ease;
-}
-
-
-/* =========================================
-   SECRET ANIMATIONS
-========================================= */
 
 @keyframes secretAppear {
 
@@ -521,8 +392,7 @@ p {
         opacity: 0;
 
         transform:
-            scale(.85)
-            translateY(20px);
+            translateY(10px);
     }
 
     to {
@@ -530,63 +400,73 @@ p {
         opacity: 1;
 
         transform:
-            scale(1)
             translateY(0);
     }
 }
 
 
-@keyframes hatAppear {
+/* =========================================
+   FLOATING SECRET BUTTON
+========================================= */
 
-    from {
+.secret-floating {
 
-        opacity: 0;
+    position: fixed;
 
-        transform:
-            translateY(-30px)
-            rotate(-15deg);
-    }
+    bottom: 20px;
 
-    to {
+    right: 20px;
 
-        opacity: 1;
+    width: 58px;
+    height: 58px;
 
-        transform:
-            translateY(0)
-            rotate(0);
-    }
+    border-radius: 50%;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    background:
+        #111;
+
+    border:
+        1px solid #b59a5a;
+
+    box-shadow:
+        0 0 18px rgba(181,154,90,.25);
+
+    z-index: 1000;
+}
+
+.secret-floating:hover {
+
+    transform: scale(1.08);
+
+    background: #201e19;
 }
 
 
-@keyframes drinkAppear {
+/* =========================================
+   FOOTER
+========================================= */
 
-    from {
+.footer {
 
-        opacity: 0;
+    margin-top: 35px;
 
-        letter-spacing: 10px;
-    }
+    color: #777;
 
-    to {
+    font-size: 13px;
 
-        opacity: 1;
-
-        letter-spacing: 1px;
-    }
-}
-
-
-@keyframes messageAppear {
-
-    from {
-
-        opacity: 0;
-    }
-
-    to {
-
-        opacity: 1;
-    }
+    font-family: Georgia, serif;
 }
 
 
@@ -598,27 +478,42 @@ p {
 
     .container {
 
-        padding: 40px 18px;
-    }
+        width: 94%;
 
+        margin: 20px auto;
+
+        padding:
+            25px 14px 30px;
+    }
 
     h1 {
 
-        font-size: 32px;
+        font-size: 31px;
     }
-
 
     h2 {
 
-        font-size: 25px;
+        font-size: 23px;
     }
 
+    .menu-item {
 
-    p {
+        font-size: 15px;
+
+        padding: 9px 2px;
+    }
+
+    .price {
+
+        font-size: 14px;
+    }
+
+    button {
+
+        width: 94%;
 
         font-size: 16px;
     }
-
 }
 
 </style>
@@ -629,88 +524,19 @@ p {
 <body>
 
 
-<!-- ======================================
-     MAIN APP
-====================================== -->
+<div class="container">
 
-<div class="container" id="app">
-
-
-<h1>
-CAFE SHELBY
-</h1>
-
-
-<div class="shelby-line"></div>
-
-
-<p class="welcome">
-به خانواده شلبی خوش آمدید
-</p>
-
-
-<button
-    class="main-button"
-    onclick="startBuilder()">
-
-    <span class="icon">
-        🥃
-    </span>
-
-    نوشیدنی خودت را بساز
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showMenuCategories()">
-
-    <span class="icon">
-        📖
-    </span>
-
-    منوی کافه
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showInstagram()">
-
-    <span class="icon">
-        📸
-    </span>
-
-    اینستاگرام کافه
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showSecretDrink()">
-
-    <span class="icon">
-        🎩
-    </span>
-
-    Secret Shelby
-
-</button>
-
+    <div id="app"></div>
 
 </div>
 
 
-
-<!-- ======================================
+<!-- =========================================
      FLOATING SECRET BUTTON
-====================================== -->
+========================================= -->
 
 <button
-    class="secret-floating-button"
+    class="secret-floating"
     onclick="showSecretDrink()"
     title="Secret Shelby">
 
@@ -719,18 +545,421 @@ CAFE SHELBY
 </button>
 
 
-
 <script>
+
+/* =========================================
+   APP
+========================================= */
+
+const app = document.getElementById("app");
 
 
 /* =========================================
-   DRINK DATA
+   HOME
 ========================================= */
 
-let drink = {
+function goHome() {
+
+    app.innerHTML = `
+
+        <h1>Cafe Shelby</h1>
+
+        <div class="subtitle">
+            به خانواده شلبی خوش آمدید
+        </div>
+
+        <button
+            class="home-button"
+            onclick="startBuilder()">
+
+            ☕ نوشیدنی خودت را بساز
+
+        </button>
+
+
+        <button
+            class="home-button"
+            onclick="showMenuCategories()">
+
+            📜 منوی کافه
+
+        </button>
+
+
+        <button
+            class="home-button"
+            onclick="showInstagram()">
+
+            📷 اینستاگرام کافه
+
+        </button>
+
+
+        <button
+            class="home-button"
+            onclick="showSecretDrink()">
+
+            🎩 Secret Shelby
+
+        </button>
+
+
+        <div class="footer">
+
+            Cafe Shelby • Since 1920
+
+        </div>
+    `;
+}
+
+
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+function showInstagram() {
+
+    app.innerHTML = `
+
+        <div class="instagram-box">
+
+            <div class="instagram-title">
+                Cafe Shelby
+            </div>
+
+            <p>
+                خانواده شلبی منتظر شماست.
+            </p>
+
+            <button
+                onclick="openInstagram()">
+
+                📷 ورود به اینستاگرام
+
+            </button>
+
+            <button
+                class="back-button"
+                onclick="goHome()">
+
+                ← بازگشت
+
+            </button>
+
+        </div>
+    `;
+}
+
+
+function openInstagram() {
+
+    window.open(
+        "https://www.instagram.com/Shellbyscafe/",
+        "_blank"
+    );
+}
+
+
+/* =========================================
+   MENU CATEGORIES
+========================================= */
+
+function showMenuCategories() {
+
+    app.innerHTML = `
+
+        <h2>منوی کافه</h2>
+
+        <button onclick="showMenu('espresso')">
+            ☕ اسپرسو بار
+        </button>
+
+        <button onclick="showMenu('hot')">
+            🔥 گرم‌نوش
+        </button>
+
+        <button onclick="showMenu('herbal')">
+            🌿 دمنوش
+        </button>
+
+        <button onclick="showMenu('v60')">
+            ☕ قهوه دمی
+        </button>
+
+        <button onclick="showMenu('coffee')">
+            🧊 بر پایه قهوه
+        </button>
+
+        <button onclick="showMenu('shake')">
+            🥤 شیک و اسموتی
+        </button>
+
+        <button onclick="showMenu('mocktail')">
+            🍹 ماکتل
+        </button>
+
+        <button onclick="showMenu('special')">
+            ✨ اسپشیال
+        </button>
+
+        <button onclick="showMenu('dessert')">
+            🍰 کیک و دسر
+        </button>
+
+        <button
+            class="back-button"
+            onclick="goHome()">
+
+            ← بازگشت
+
+        </button>
+    `;
+}
+
+
+/* =========================================
+   MENU DATA
+========================================= */
+
+const menus = {
+
+    espresso: {
+
+        title: "اسپرسو بار",
+
+        items: [
+
+            ["اسپرسو ۷۰/۳۰ عربیکا", "120,000"],
+
+            ["اسپرسو ۸۰/۲۰ روبوستا", "110,000"],
+
+            ["کرتادو", "126,500"],
+
+            ["آمریکانو", "143,000"],
+
+            ["کاپوچینو", "154,000"],
+
+            ["لاته", "176,000"],
+
+            ["لاته ماکیاتو", "236,500"]
+
+        ]
+    },
+
+
+    hot: {
+
+        title: "گرم‌نوش",
+
+        items: [
+
+            ["چای ماسالا", "150,000"],
+
+            ["چای کرک", "190,000"],
+
+            ["هات چاکلت", "170,000"]
+
+        ]
+    },
+
+
+    herbal: {
+
+        title: "دمنوش",
+
+        items: [
+
+            ["ماچا لاته", "275,000"],
+
+            ["چای ساده", "77,000"],
+
+            ["چای دارچین", "82,500"],
+
+            ["کوئین بری", "99,000"],
+
+            ["پیچ بلک", "93,500"],
+
+            ["اپل پارادایس", "88,000"]
+
+        ]
+    },
+
+
+    v60: {
+
+        title: "قهوه دمی",
+
+        items: [
+
+            ["V60", "440,000"]
+
+        ]
+    },
+
+
+    coffee: {
+
+        title: "بر پایه قهوه",
+
+        items: [
+
+            ["آیس آمریکانو", "148,500"],
+
+            ["آیس لاته", "181,500"],
+
+            ["آیس کارامل ماکیاتو", "269,500"],
+
+            ["پینا کافی", "240,000"],
+
+            ["پیچ کافی", "230,000"],
+
+            ["اوپی کافی", "250,000"]
+
+        ]
+    },
+
+
+    shake: {
+
+        title: "شیک و اسموتی",
+
+        items: [
+
+            ["شیک پینات", "407,000"],
+
+            ["شیک لوتوس", "407,000"],
+
+            ["چیز شیک", "330,000"],
+
+            ["شیک شکلات", "330,000"],
+
+            ["منگونیت", "407,000"],
+
+            ["دراگون بری", "425,700"]
+
+        ]
+    },
+
+
+    mocktail: {
+
+        title: "ماکتل",
+
+        items: [
+
+            ["شلبی", "440,000"],
+
+            ["پیچ دراگون", "352,000"],
+
+            ["بلوبار بری", "341,000"],
+
+            ["موهیتو", "297,000"],
+
+            ["لیموناد", "286,000"]
+
+        ]
+    },
+
+
+    special: {
+
+        title: "اسپشیال",
+
+        items: [
+
+            ["دالگونا", "297,000"],
+
+            ["بلو کرما", "352,000"],
+
+            ["آیس ماچا", "280,500"]
+
+        ]
+    },
+
+
+    dessert: {
+
+        title: "کیک و دسر",
+
+        items: [
+
+            ["ترامیسو توت‌فرنگی", "320,000"],
+
+            ["ترامیسو شکلات", "330,000"],
+
+            ["ترامیسو قهوه", "350,000"]
+
+        ]
+    }
+
+};
+
+
+/* =========================================
+   SHOW MENU
+========================================= */
+
+function showMenu(category) {
+
+    const menu = menus[category];
+
+    let html = `
+
+        <h2>${menu.title}</h2>
+
+        <div class="menu-category">
+
+    `;
+
+
+    menu.items.forEach(item => {
+
+        html += `
+
+            <div class="menu-item">
+
+                <span>
+                    ${item[0]}
+                </span>
+
+                <span class="price">
+                    ${item[1]}
+                </span>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html += `
+
+        </div>
+
+        <button
+            class="back-button"
+            onclick="showMenuCategories()">
+
+            ← بازگشت به منو
+
+        </button>
+
+    `;
+
+
+    app.innerHTML = html;
+}
+
+
+/* =========================================
+   DRINK BUILDER
+========================================= */
+
+let builder = {
 
     base: "",
-    temperature: "",
+    mood: "",
     flavor: "",
     personality: "",
     risk: "",
@@ -741,1471 +970,338 @@ let drink = {
 };
 
 
-
 /* =========================================
-   HOME
-========================================= */
-
-function goHome() {
-
-document.getElementById("app").innerHTML = `
-
-<h1>
-CAFE SHELBY
-</h1>
-
-<div class="shelby-line"></div>
-
-<p class="welcome">
-به خانواده شلبی خوش آمدید
-</p>
-
-
-<button
-    class="main-button"
-    onclick="startBuilder()">
-
-    <span class="icon">
-        🥃
-    </span>
-
-    نوشیدنی خودت را بساز
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showMenuCategories()">
-
-    <span class="icon">
-        📖
-    </span>
-
-    منوی کافه
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showInstagram()">
-
-    <span class="icon">
-        📸
-    </span>
-
-    اینستاگرام کافه
-
-</button>
-
-
-<button
-    class="main-button"
-    onclick="showSecretDrink()">
-
-    <span class="icon">
-        🎩
-    </span>
-
-    Secret Shelby
-
-</button>
-
-`;
-
-}
-
-
-
-/* =========================================
-   INSTAGRAM
-========================================= */
-
-function showInstagram() {
-
-document.getElementById("app").innerHTML = `
-
-<h2>
-اینستاگرام کافه
-</h2>
-
-<div class="shelby-line"></div>
-
-<p>
-خانواده شلبی را در اینستاگرام دنبال کن.
-</p>
-
-
-<button
-    class="main-button"
-    onclick="openInstagram()">
-
-    <span class="icon">
-        📸
-    </span>
-
-    ورود به پیج اینستاگرام
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="goHome()">
-
-    ← بازگشت به صفحه اصلی
-
-</button>
-
-`;
-
-}
-
-
-function openInstagram() {
-
-window.open(
-    "https://www.instagram.com/Shellbyscafe/",
-    "_blank"
-);
-
-}
-
-
-
-/* =========================================
-   MENU CATEGORIES
-========================================= */
-
-function showMenuCategories() {
-
-document.getElementById("app").innerHTML = `
-
-<h2>
-منوی کافه
-</h2>
-
-<div class="shelby-line"></div>
-
-
-<button
-    class="option"
-    onclick="showMenu('espresso')">
-
-    ☕ اسپرسو بار
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('hot')">
-
-    🔥 گرم‌نوش
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('herbal')">
-
-    🍵 دمنوش
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('v60')">
-
-    ☕ قهوه دمی
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('iced')">
-
-    🧊 بر پایه قهوه
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('shake')">
-
-    🥤 شیک و اسموتی
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('mocktail')">
-
-    🍹 ماکتل
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('special')">
-
-    ✨ اسپشیال
-
-</button>
-
-
-<button
-    class="option"
-    onclick="showMenu('dessert')">
-
-    🍰 کیک و دسر
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="goHome()">
-
-    ← بازگشت به صفحه اصلی
-
-</button>
-
-`;
-
-}
-
-
-
-/* =========================================
-   MENU ITEMS
-========================================= */
-
-function showMenu(category) {
-
-let title = "";
-
-let items = "";
-
-
-
-/* ESPRESSO */
-
-if (category === "espresso") {
-
-title = "اسپرسو بار";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-اسپرسو ۷۰/۳۰ عربیکا
-</div>
-
-<span class="menu-price">
-110,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-اسپرسو ۸۰/۲۰ روبستا
-</div>
-
-<span class="menu-price">
-90,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-کرتادو
-</div>
-
-<span class="menu-price">
-115,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-آمریکانو
-</div>
-
-<span class="menu-price">
-130,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-کاپوچینو
-</div>
-
-<span class="menu-price">
-140,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-لاته
-</div>
-
-<span class="menu-price">
-160,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-لاته ماکیاتو
-</div>
-
-<span class="menu-price">
-215,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* HOT */
-
-else if (category === "hot") {
-
-title = "گرم‌نوش";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-چای ماسالا
-</div>
-
-<span class="menu-price">
-270,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-چای کرک
-</div>
-
-<span class="menu-price">
-300,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-هات چاکلت
-</div>
-
-<span class="menu-price">
-290,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* HERBAL */
-
-else if (category === "herbal") {
-
-title = "دمنوش";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-ماچا لاته
-</div>
-
-<span class="menu-price">
-250,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-چای ساده
-</div>
-
-<span class="menu-price">
-70,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-چای دارچین
-</div>
-
-<span class="menu-price">
-75,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-کوئین بری
-</div>
-
-<span class="menu-price">
-90,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-پیچ بلک
-</div>
-
-<span class="menu-price">
-85,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-اپل پارادایس
-</div>
-
-<span class="menu-price">
-80,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* V60 */
-
-else if (category === "v60") {
-
-title = "قهوه دمی";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-V60
-</div>
-
-<span class="menu-price">
-400,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* ICED */
-
-else if (category === "iced") {
-
-title = "بر پایه قهوه";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-آیس آمریکانو
-</div>
-
-<span class="menu-price">
-135,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-آیس لاته
-</div>
-
-<span class="menu-price">
-165,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-آیس کارامل ماکیاتو
-</div>
-
-<span class="menu-price">
-245,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* SHAKES */
-
-else if (category === "shake") {
-
-title = "شیک و اسموتی";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-شیک پینات
-</div>
-
-<span class="menu-price">
-370,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-شیک لوتوس
-</div>
-
-<span class="menu-price">
-370,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-چیز شیک
-</div>
-
-<span class="menu-price">
-300,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-شیک شکلات
-</div>
-
-<span class="menu-price">
-300,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-منگونیت
-</div>
-
-<span class="menu-price">
-370,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-دراگون بری
-</div>
-
-<span class="menu-price">
-387,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* MOCKTAIL */
-
-else if (category === "mocktail") {
-
-title = "ماکتل";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-شلبی
-</div>
-
-<span class="menu-price">
-400,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-پیچ دراگون
-</div>
-
-<span class="menu-price">
-320,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-بلوبار بری
-</div>
-
-<span class="menu-price">
-310,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-موهیتو
-</div>
-
-<span class="menu-price">
-270,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-لیموناد
-</div>
-
-<span class="menu-price">
-260,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* SPECIAL */
-
-else if (category === "special") {
-
-title = "اسپشیال";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-دالگونا
-</div>
-
-<span class="menu-price">
-270,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-بلو کرما
-</div>
-
-<span class="menu-price">
-320,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-آیس ماچا
-</div>
-
-<span class="menu-price">
-255,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-/* DESSERT */
-
-else if (category === "dessert") {
-
-title = "کیک و دسر";
-
-items = `
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-ترامیسو توت‌فرنگی
-</div>
-
-<span class="menu-price">
-280,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-ترامیسو شکلات
-</div>
-
-<span class="menu-price">
-260,000
-</span>
-
-</div>
-
-
-<div class="menu-item">
-
-<div class="menu-item-name">
-ترامیسو قهوه
-</div>
-
-<span class="menu-price">
-270,000
-</span>
-
-</div>
-
-`;
-
-}
-
-
-
-/* SHOW MENU */
-
-document.getElementById("app").innerHTML = `
-
-<h2>
-${title}
-</h2>
-
-<div class="shelby-line"></div>
-
-
-<div class="menu-box">
-
-${items}
-
-</div>
-
-
-<button
-    class="option back-button"
-    onclick="showMenuCategories()">
-
-    ← بازگشت به منو
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="goHome()">
-
-    ← صفحه اصلی
-
-</button>
-
-`;
-
-}
-
-
-
-/* =========================================
-   DRINK BUILDER
+   START BUILDER
 ========================================= */
 
 function startBuilder() {
 
-document.getElementById("app").innerHTML = `
+    builder = {
 
-<div class="question-number">
-مرحله ۱ از ۸
-</div>
+        base: "",
+        mood: "",
+        flavor: "",
+        personality: "",
+        risk: "",
+        sweetness: "",
+        topping: "",
+        size: ""
 
-<h2>
-پایه‌ی داستان
-</h2>
+    };
 
-<p>
-داستان نوشیدنی تو از کجا شروع بشه؟
-</p>
-
-
-<button
-    class="option"
-    onclick="chooseBase('اسپرسوی تلخ')">
-
-    ☕ از یک اسپرسوی تلخ
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseBase('چای آرام')">
-
-    🍵 از یک چای آرام
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseBase('طعم میوه‌ای')">
-
-    🍓 از یک طعم میوه‌ای
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseBase('نوشیدنی خنک')">
-
-    🥂 از یک نوشیدنی خنک
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="goHome()">
-
-    ← بازگشت به صفحه اصلی
-
-</button>
-
-`;
-
+    chooseBase();
 }
 
 
-function chooseBase(base) {
+/* =========================================
+   QUESTION 1
+========================================= */
 
-drink.base = base;
+function chooseBase() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 1 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۲ از ۸
-</div>
-
-<h2>
-حال و هوای نوشیدنی
-</h2>
-
-<p>
-امروز نوشیدنی‌ات چه حال و هوایی داشته باشه؟
-</p>
+        <div class="question">
+            امشب پایه‌ی نوشیدنی تو چیه؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseTemperature('گرم و صمیمی')">
+        <button onclick="builder.base='قهوه'; chooseTemperature()">
+            ☕ قهوه و اسپرسو
+        </button>
 
-    🔥 گرم و صمیمی
+        <button onclick="builder.base='چای'; chooseTemperature()">
+            🍵 چای
+        </button>
 
-</button>
+        <button onclick="builder.base='میوه‌ای'; chooseTemperature()">
+            🍓 طعم‌های میوه‌ای
+        </button>
 
+        <button onclick="builder.base='خنک'; chooseTemperature()">
+            🧊 یک نوشیدنی خنک
+        </button>
 
-<button
-    class="option"
-    onclick="chooseTemperature('خنک و سرحال')">
+        <button
+            class="back-button"
+            onclick="goHome()">
 
-    ❄️ خنک و سرحال
+            ← خروج
 
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTemperature('آرام و مرموز')">
-
-    🌙 آرام و مرموز
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTemperature('پرانرژی و جسور')">
-
-    ⚡ پرانرژی و جسور
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="startBuilder()">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+        </button>
+    `;
 }
 
 
-function chooseTemperature(temperature) {
+/* =========================================
+   QUESTION 2
+========================================= */
 
-drink.temperature = temperature;
+function chooseTemperature() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 2 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۳ از ۸
-</div>
-
-<h2>
-وسوسه‌ات کدومه؟
-</h2>
-
-<p>
-اگر فقط یکی رو می‌تونستی انتخاب کنی...
-</p>
+        <div class="question">
+            حال و هوای امشبت چطوره؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseFlavor('شکلات')">
+        <button onclick="builder.mood='گرم و صمیمی'; chooseFlavor()">
+            🕯 گرم و صمیمی
+        </button>
 
-    🍫 شکلات
+        <button onclick="builder.mood='خنک و پرانرژی'; chooseFlavor()">
+            ❄️ خنک و پرانرژی
+        </button>
 
-</button>
+        <button onclick="builder.mood='آرام و مرموز'; chooseFlavor()">
+            🌙 آرام و مرموز
+        </button>
 
+        <button onclick="builder.mood='جسور و پرانرژی'; chooseFlavor()">
+            🔥 جسور و پرانرژی
+        </button>
 
-<button
-    class="option"
-    onclick="chooseFlavor('کارامل')">
-
-    🍮 کارامل
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseFlavor('توت‌فرنگی')">
-
-    🍓 توت‌فرنگی
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseFlavor('فندق')">
-
-    🌰 فندق
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseFlavor('مرکبات')">
-
-    🍋 مرکبات
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="chooseBase(drink.base)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function chooseFlavor(flavor) {
+/* =========================================
+   QUESTION 3
+========================================= */
 
-drink.flavor = flavor;
+function chooseFlavor() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 3 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۴ از ۸
-</div>
-
-<h2>
-شخصیت نوشیدنی
-</h2>
-
-<p>
-نوشیدنی تو باید چه شخصیتی داشته باشه؟
-</p>
+        <div class="question">
+            کدوم طعم بیشتر وسوست می‌کنه؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="choosePersonality('تلخ و مرموز')">
+        <button onclick="builder.flavor='شکلات'; choosePersonality()">
+            🍫 شکلات
+        </button>
 
-    🖤 تلخ و مرموز
+        <button onclick="builder.flavor='کارامل'; choosePersonality()">
+            🍮 کارامل
+        </button>
 
-</button>
+        <button onclick="builder.flavor='توت‌فرنگی'; choosePersonality()">
+            🍓 توت‌فرنگی
+        </button>
 
+        <button onclick="builder.flavor='فندق'; choosePersonality()">
+            🌰 فندق
+        </button>
 
-<button
-    class="option"
-    onclick="choosePersonality('شیرین و دوست‌داشتنی')">
+        <button onclick="builder.flavor='مرکبات'; choosePersonality()">
+            🍊 مرکبات
+        </button>
 
-    🤎 شیرین و دوست‌داشتنی
-
-</button>
-
-
-<button
-    class="option"
-    onclick="choosePersonality('جسور و هیجان‌انگیز')">
-
-    ❤️ جسور و هیجان‌انگیز
-
-</button>
-
-
-<button
-    class="option"
-    onclick="choosePersonality('ظریف و لطیف')">
-
-    🤍 ظریف و لطیف
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="chooseTemperature(drink.temperature)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function choosePersonality(personality) {
+/* =========================================
+   QUESTION 4
+========================================= */
 
-drink.personality = personality;
+function choosePersonality() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 4 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۵ از ۸
-</div>
-
-<h2>
-ریسک می‌کنی؟
-</h2>
-
-<p>
-چقدر اهل امتحان کردن طعم‌های جدیدی؟
-</p>
+        <div class="question">
+            شخصیت نوشیدنی تو باید شبیه خودت باشه...
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseRisk('طعم‌های آشنا')">
+        <button onclick="builder.personality='تلخ و مرموز'; chooseRisk()">
+            🖤 تلخ و مرموز
+        </button>
 
-    😌 همون چیزهای آشنا
+        <button onclick="builder.personality='شیرین و دوست‌داشتنی'; chooseRisk()">
+            🤎 شیرین و دوست‌داشتنی
+        </button>
 
-</button>
+        <button onclick="builder.personality='جسور و هیجان‌انگیز'; chooseRisk()">
+            🔥 جسور و هیجان‌انگیز
+        </button>
 
+        <button onclick="builder.personality='ظریف و خاص'; chooseRisk()">
+            ✨ ظریف و خاص
+        </button>
 
-<button
-    class="option"
-    onclick="chooseRisk('یه چیز متفاوت')">
-
-    👀 یه چیز متفاوت
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseRisk('سورپرایزم کن')">
-
-    🔥 سورپرایزم کن
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseRisk('کاملاً بسپار به شانس')">
-
-    🎲 کاملاً بسپار به شانس
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="chooseFlavor(drink.flavor)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function chooseRisk(risk) {
+/* =========================================
+   QUESTION 5
+========================================= */
 
-drink.risk = risk;
+function chooseRisk() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 5 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۶ از ۸
-</div>
-
-<h2>
-میزان شیرینی
-</h2>
-
-<p>
-شیرینی رو چطور می‌پسندی؟
-</p>
+        <div class="question">
+            چقدر حاضری ریسک کنی؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseSweetness('بدون شیرینی')">
+        <button onclick="builder.risk='آشنا'; chooseSweetness()">
+            🎩 همون چیز آشنا
+        </button>
 
-    🖤 اصلاً شیرین نباشه
+        <button onclick="builder.risk='متفاوت'; chooseSweetness()">
+            🥃 یکم متفاوت
+        </button>
 
-</button>
+        <button onclick="builder.risk='غافلگیرم کن'; chooseSweetness()">
+            🎲 غافلگیرم کن
+        </button>
 
+        <button onclick="builder.risk='شانس'; chooseSweetness()">
+            🃏 همه‌چیز رو می‌سپارم به شانس
+        </button>
 
-<button
-    class="option"
-    onclick="chooseSweetness('کم')">
-
-    🤏 یه ذره
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseSweetness('متعادل')">
-
-    😋 متعادل
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseSweetness('شیرین')">
-
-    🍭 شیرین و جذاب
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="choosePersonality(drink.personality)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function chooseSweetness(sweetness) {
+/* =========================================
+   QUESTION 6
+========================================= */
 
-drink.sweetness = sweetness;
+function chooseSweetness() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 6 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۷ از ۸
-</div>
-
-<h2>
-ضربه‌ی آخر
-</h2>
-
-<p>
-یه چیز اضافه کنیم که نوشیدنی خاص‌تر بشه؟
-</p>
+        <div class="question">
+            شیرینی نوشیدنی چقدر باشه؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseTopping('خامه')">
+        <button onclick="builder.sweetness='بدون شیرینی'; chooseTopping()">
+            بدون شیرینی
+        </button>
 
-    🍦 خامه
+        <button onclick="builder.sweetness='کم'; chooseTopping()">
+            کم
+        </button>
 
-</button>
+        <button onclick="builder.sweetness='متعادل'; chooseTopping()">
+            متعادل
+        </button>
 
+        <button onclick="builder.sweetness='شیرین'; chooseTopping()">
+            شیرین
+        </button>
 
-<button
-    class="option"
-    onclick="chooseTopping('شکلات')">
-
-    🍫 شکلات
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTopping('فندق')">
-
-    🌰 فندق
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTopping('میوه')">
-
-    🍓 میوه
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTopping('یه ترکیب خاص')">
-
-    ✨ یه ترکیب خاص
-
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseTopping('بدون افزودنی')">
-
-    ❌ نه، همین کافیه
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="chooseRisk(drink.risk)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function chooseTopping(topping) {
+/* =========================================
+   QUESTION 7
+========================================= */
 
-drink.topping = topping;
+function chooseTopping() {
 
+    app.innerHTML = `
 
-document.getElementById("app").innerHTML = `
+        <div class="progress">
+            مرحله 7 از 8
+        </div>
 
-<div class="question-number">
-مرحله ۸ از ۸
-</div>
-
-<h2>
-آخرین انتخاب
-</h2>
-
-<p>
-چقدر از نوشیدنی خودت می‌خوای؟
-</p>
+        <div class="question">
+            آخرش چی روش باشه؟
+        </div>
 
 
-<button
-    class="option"
-    onclick="chooseSize('کوچیک و جمع‌وجور')">
+        <button onclick="builder.topping='خامه'; chooseSize()">
+            🤍 خامه
+        </button>
 
-    🥃 کوچیک و جمع‌وجور
+        <button onclick="builder.topping='شکلات'; chooseSize()">
+            🍫 شکلات
+        </button>
 
-</button>
+        <button onclick="builder.topping='فندق'; chooseSize()">
+            🌰 فندق
+        </button>
 
+        <button onclick="builder.topping='میوه'; chooseSize()">
+            🍓 میوه
+        </button>
 
-<button
-    class="option"
-    onclick="chooseSize('استاندارد')">
+        <button onclick="builder.topping='میکس ویژه'; chooseSize()">
+            ✨ میکس ویژه
+        </button>
 
-    ☕ استاندارد
+        <button onclick="builder.topping='هیچ‌چیز'; chooseSize()">
+            بدون تاپینگ
+        </button>
 
-</button>
-
-
-<button
-    class="option"
-    onclick="chooseSize('بزرگ و طولانی')">
-
-    🥤 بزرگ و طولانی
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="chooseSweetness(drink.sweetness)">
-
-    ← بازگشت
-
-</button>
-
-`;
-
+    `;
 }
 
 
-function chooseSize(size) {
+/* =========================================
+   QUESTION 8
+========================================= */
 
-drink.size = size;
+function chooseSize() {
 
-showResult();
+    app.innerHTML = `
 
+        <div class="progress">
+            مرحله 8 از 8
+        </div>
+
+        <div class="question">
+            سایزش چقدر باشه؟
+        </div>
+
+
+        <button onclick="builder.size='کوچک'; showResult()">
+            کوچک
+        </button>
+
+        <button onclick="builder.size='استاندارد'; showResult()">
+            استاندارد
+        </button>
+
+        <button onclick="builder.size='بزرگ'; showResult()">
+            بزرگ
+        </button>
+
+    `;
 }
-
 
 
 /* =========================================
@@ -2214,203 +1310,168 @@ showResult();
 
 function showResult() {
 
-document.getElementById("app").innerHTML = `
+    app.innerHTML = `
 
-<h1>
-نوشیدنی تو آماده‌ست
-</h1>
+        <div class="result-box">
 
-<div class="shelby-line"></div>
-
-<p>
-این نوشیدنی رو خودت ساختی.
-</p>
-
-
-<div class="result">
-
-<p>
-☕ <strong>پایه:</strong>
-${drink.base}
-</p>
-
-
-<p>
-🌡️ <strong>حال و هوا:</strong>
-${drink.temperature}
-</p>
-
-
-<p>
-🍫 <strong>طعم:</strong>
-${drink.flavor}
-</p>
-
-
-<p>
-🎭 <strong>شخصیت:</strong>
-${drink.personality}
-</p>
-
-
-<p>
-🎲 <strong>ریسک:</strong>
-${drink.risk}
-</p>
-
-
-<p>
-🍬 <strong>شیرینی:</strong>
-${drink.sweetness}
-</p>
-
-
-<p>
-✨ <strong>افزودنی:</strong>
-${drink.topping}
-</p>
-
-
-<p>
-🥤 <strong>حجم:</strong>
-${drink.size}
-</p>
-
-</div>
-
-
-<button
-    class="option"
-    onclick="startBuilder()">
-
-    دوباره بساز
-
-</button>
-
-
-<button
-    class="option back-button"
-    onclick="goHome()">
-
-    ← صفحه اصلی
-
-</button>
-
-`;
-
-}
-
-
-
-/* =========================================
-   SECRET MENU
-========================================= */
-
-const secretDrinks = [
-
-    {
-        name: "آیس منگو"
-    },
-
-    {
-        name: "اورنج کافی"
-    },
-
-    {
-        name: "گرین وی"
-    },
-
-    {
-        name: "شوکوبری"
-    },
-
-    {
-        name: "گراناپل"
-    },
-
-    {
-        name: "آفوگاتو"
-    },
-
-    {
-        name: "شیک پسته"
-    },
-
-    {
-        name: "فراپاچینو"
-    },
-
-    {
-        name: "جلی بری"
-    },
-
-    {
-        name: "جینجرکوکونات"
-    },
-
-    {
-        name: "استرانیت"
-    }
-
-];
-
-
-function showSecretDrink() {
-
-    const randomIndex =
-        Math.floor(
-            Math.random()
-            * secretDrinks.length
-        );
-
-
-    const randomDrink =
-        secretDrinks[randomIndex];
-
-
-    document.getElementById("app").innerHTML = `
-
-        <div class="secret-reveal">
-
-            <div class="secret-symbol">
-                🎩
+            <div class="result-title">
+                نوشیدنی تو آماده‌ست 🎩
             </div>
 
 
-            <div class="question-number">
-                THE SECRET MENU
+            <div class="result-text">
+
+                <p>
+                    پایه:
+                    <strong>${builder.base}</strong>
+                </p>
+
+                <p>
+                    حال‌وهوا:
+                    <strong>${builder.mood}</strong>
+                </p>
+
+                <p>
+                    طعم:
+                    <strong>${builder.flavor}</strong>
+                </p>
+
+                <p>
+                    شخصیت:
+                    <strong>${builder.personality}</strong>
+                </p>
+
+                <p>
+                    میزان ریسک:
+                    <strong>${builder.risk}</strong>
+                </p>
+
+                <p>
+                    شیرینی:
+                    <strong>${builder.sweetness}</strong>
+                </p>
+
+                <p>
+                    تاپینگ:
+                    <strong>${builder.topping}</strong>
+                </p>
+
+                <p>
+                    سایز:
+                    <strong>${builder.size}</strong>
+                </p>
+
+                <br>
+
+                <p>
+                    حالا ترکیب خودت رو به باریستا نشون بده
+                    و نوشیدنی مخصوص خودت رو سفارش بده.
+                </p>
+
             </div>
-
-
-            <h2 class="secret-drink-name">
-
-                ${randomDrink.name}
-
-            </h2>
-
-
-            <div class="shelby-line"></div>
-
-
-            <p class="secret-message">
-
-                این نوشیدنی فقط برای خانواده شلبی است.
-
-            </p>
 
 
             <button
-                class="main-button secret-again"
-                onclick="showSecretDrink()">
+                onclick="startBuilder()">
 
-                🎲
-                یک نوشیدنی دیگر
+                🔄 دوباره بساز
 
             </button>
 
 
             <button
-                class="option back-button"
+                onclick="goHome()">
+
+                ← بازگشت به خانه
+
+            </button>
+
+        </div>
+
+    `;
+}
+
+
+/* =========================================
+   SECRET DRINKS
+========================================= */
+
+const secretDrinks = [
+
+    "آیس منگو 🥭",
+
+    "اورنج کافی 🍊☕",
+
+    "گرین وی 🍃",
+
+    "شوکوبری 🍫🍓",
+
+    "گرانابل 🍎",
+
+    "آفوگاتو ☕🍨",
+
+    "شیک پسته 💚",
+
+    "فراپاچینو 🧊☕",
+
+    "جلی بری 🍓",
+
+    "جینجر کوکونات 🥥",
+
+    "استرانیت ✨"
+
+];
+
+
+/* =========================================
+   SECRET DRINK
+========================================= */
+
+function showSecretDrink() {
+
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            secretDrinks.length
+        );
+
+    const drink =
+        secretDrinks[randomIndex];
+
+
+    app.innerHTML = `
+
+        <div class="secret-box">
+
+            <div class="secret-title">
+                SECRET SHELBY
+            </div>
+
+
+            <p>
+                یک آیتم مخفی برای تو انتخاب شد...
+            </p>
+
+
+            <div class="secret-drink">
+                ${drink}
+            </div>
+
+
+            <p>
+                این یکی توی منوی معمولی نیست.
+            </p>
+
+
+            <button
+                onclick="showSecretDrink()">
+
+                🎲 یکی دیگه
+
+            </button>
+
+
+            <button
                 onclick="goHome()">
 
                 ← بازگشت
@@ -2420,11 +1481,16 @@ function showSecretDrink() {
         </div>
 
     `;
-
 }
 
-</script>
 
+/* =========================================
+   START
+========================================= */
+
+goHome();
+
+</script>
 
 </body>
 
