@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -224,24 +225,28 @@ button:hover {
 .menu-category h3 {
 
     margin-bottom: 15px;
+
+    padding-bottom: 8px;
 }
 
 .menu-item {
 
     display: flex;
 
-    justify-content: space-between;
+    flex-direction: column;
+
+    justify-content: center;
 
     align-items: center;
 
-    gap: 15px;
+    gap: 3px;
 
-    padding: 10px 5px;
+    padding: 12px 5px;
 
     border-bottom:
         1px solid rgba(255,255,255,.07);
 
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .menu-item:last-child {
@@ -258,6 +263,30 @@ button:hover {
     white-space: nowrap;
 
     font-family: Georgia, serif;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SHELBY RECOMMENDATION
+========================================= */
+
+.shelby-recommendation {
+
+    color: #d4b66b;
+
+    font-size: 14px;
+
+    margin-top: 3px;
+
+    padding: 2px 10px;
+
+    border: 1px solid rgba(181,154,90,.4);
+
+    background: rgba(181,154,90,.06);
+
+    border-radius: 20px;
 }
 
 
@@ -500,7 +529,7 @@ button:hover {
 
         font-size: 15px;
 
-        padding: 9px 2px;
+        padding: 11px 2px;
     }
 
     .price {
@@ -661,63 +690,6 @@ function openInstagram() {
 
 
 /* =========================================
-   MENU CATEGORIES
-========================================= */
-
-function showMenuCategories() {
-
-    app.innerHTML = `
-
-        <h2>منوی کافه</h2>
-
-        <button onclick="showMenu('espresso')">
-            ☕ اسپرسو بار
-        </button>
-
-        <button onclick="showMenu('hot')">
-            🔥 گرم‌نوش
-        </button>
-
-        <button onclick="showMenu('herbal')">
-            🌿 دمنوش
-        </button>
-
-        <button onclick="showMenu('v60')">
-            ☕ قهوه دمی
-        </button>
-
-        <button onclick="showMenu('coffee')">
-            🧊 بر پایه قهوه
-        </button>
-
-        <button onclick="showMenu('shake')">
-            🥤 شیک و اسموتی
-        </button>
-
-        <button onclick="showMenu('mocktail')">
-            🍹 ماکتل
-        </button>
-
-        <button onclick="showMenu('special')">
-            ✨ اسپشیال
-        </button>
-
-        <button onclick="showMenu('dessert')">
-            🍰 کیک و دسر
-        </button>
-
-        <button
-            class="back-button"
-            onclick="goHome()">
-
-            ← بازگشت
-
-        </button>
-    `;
-}
-
-
-/* =========================================
    MENU DATA
 ========================================= */
 
@@ -753,11 +725,11 @@ const menus = {
 
         items: [
 
-            ["چای ماسالا", "150,000"],
+            ["چای ماسالا", "172,500"],
 
-            ["چای کرک", "190,000"],
+            ["چای کرک", "218,500"],
 
-            ["هات چاکلت", "170,000"]
+            ["هات چاکلت", "195,500"]
 
         ]
     },
@@ -803,17 +775,17 @@ const menus = {
 
         items: [
 
-            ["آیس آمریکانو", "148,500"],
+            ["آیس آمریکانو", "170,775"],
 
-            ["آیس لاته", "181,500"],
+            ["آیس لاته", "208,725"],
 
-            ["آیس کارامل ماکیاتو", "269,500"],
+            ["آیس کارامل ماکیاتو", "309,925"],
 
-            ["پینا کافی", "240,000"],
+            ["پینا کافی", "276,000"],
 
-            ["پیچ کافی", "230,000"],
+            ["پیچ کافی", "264,500"],
 
-            ["اوپی کافی", "250,000"]
+            ["اوپی کافی", "287,500"]
 
         ]
     },
@@ -896,35 +868,71 @@ const menus = {
 
 
 /* =========================================
-   SHOW MENU
+   SHOW ALL MENU
 ========================================= */
 
-function showMenu(category) {
-
-    const menu = menus[category];
+function showMenuCategories() {
 
     let html = `
 
-        <h2>${menu.title}</h2>
+        <h2>منوی کافه</h2>
 
-        <div class="menu-category">
+        <div class="subtitle">
+            انتخابی از خانواده شلبی
+        </div>
 
     `;
 
 
-    menu.items.forEach(item => {
+    Object.values(menus).forEach(menu => {
+
+        // انتخاب تصادفی یک آیتم در هر دسته
+
+        const recommendedIndex =
+            Math.floor(
+                Math.random() * menu.items.length
+            );
+
 
         html += `
 
-            <div class="menu-item">
+            <div class="menu-category">
 
-                <span>
-                    ${item[0]}
-                </span>
+                <h3>${menu.title}</h3>
 
-                <span class="price">
-                    ${item[1]}
-                </span>
+        `;
+
+
+        menu.items.forEach((item, index) => {
+
+            html += `
+
+                <div class="menu-item">
+
+                    <span>
+                        ${item[0]}
+                    </span>
+
+                    <span class="price">
+                        ${item[1]}
+                    </span>
+
+                    ${
+                        index === recommendedIndex
+                        ? `<span class="shelby-recommendation">
+                            (پیشنهاد شلبی)
+                           </span>`
+                        : ""
+                    }
+
+                </div>
+
+            `;
+
+        });
+
+
+        html += `
 
             </div>
 
@@ -935,13 +943,11 @@ function showMenu(category) {
 
     html += `
 
-        </div>
-
         <button
             class="back-button"
-            onclick="showMenuCategories()">
+            onclick="goHome()">
 
-            ← بازگشت به منو
+            ← بازگشت به خانه
 
         </button>
 
