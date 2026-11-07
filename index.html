@@ -3,11 +3,8 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cafe Shelby</title>
 
@@ -19,10 +16,7 @@
 
 <style>
 
-/* =========================================
-   GENERAL
-========================================= */
-
+/* GENERAL */
 * {
     box-sizing: border-box;
 }
@@ -30,628 +24,358 @@
 body {
     margin: 0;
     min-height: 100vh;
-
     background:
         radial-gradient(circle at center,
         #252116 0%,
         #111 45%,
         #080808 100%);
-
     color: #eee4c8;
-
     font-family: "Amiri", Tahoma, serif;
-
     text-align: center;
 }
 
-
-/* =========================================
-   MAIN CONTAINER
-========================================= */
-
+/* MAIN CONTAINER */
 .container {
-
     width: 92%;
     max-width: 650px;
-
     margin: 35px auto;
-
     padding: 30px 22px 35px;
-
     border: 1px solid #b59a5a;
-
     position: relative;
-
     background:
         linear-gradient(
             rgba(0,0,0,.88),
             rgba(10,10,10,.95)
         );
-
     box-shadow:
         0 0 30px rgba(0,0,0,.8),
         inset 0 0 20px rgba(181,154,90,.08);
 }
 
-
-/* =========================================
-   VINTAGE INNER FRAME
-========================================= */
-
+/* VINTAGE INNER FRAME */
 .container::before {
-
     content: "";
-
     position: absolute;
-
     top: 9px;
     left: 9px;
     right: 9px;
     bottom: 9px;
-
     border: 1px solid rgba(181,154,90,.45);
-
     pointer-events: none;
 }
 
-
-/* =========================================
-   TITLES
-========================================= */
-
+/* TITLES */
 h1 {
-
     margin-top: 5px;
     margin-bottom: 5px;
-
     color: #d4b66b;
-
     font-family: "Cinzel", serif;
-
     font-size: 38px;
-
     letter-spacing: 3px;
-
-    text-shadow:
-        0 0 10px rgba(212,182,107,.15);
+    text-shadow: 0 0 10px rgba(212,182,107,.15);
 }
 
 h2 {
-
     color: #d4b66b;
-
     font-size: 25px;
-
     margin-top: 10px;
 }
 
 h3 {
-
     color: #d4b66b;
-
     font-size: 21px;
 }
 
 .subtitle {
-
     color: #aaa;
-
     font-size: 16px;
-
     margin-bottom: 25px;
 }
 
-
-/* =========================================
-   BUTTONS
-========================================= */
-
+/* BUTTONS */
 button {
-
     width: 90%;
-
     margin: 8px auto;
-
     padding: 13px 18px;
-
     display: block;
-
     background:
         linear-gradient(
             180deg,
             #201e19,
             #111
         );
-
     color: #eee4c8;
-
     border: 1px solid #9d8449;
-
     font-family: "Amiri", Tahoma, serif;
-
     font-size: 17px;
-
     cursor: pointer;
-
     transition: .25s;
-
-    box-shadow:
-        inset 0 0 8px rgba(181,154,90,.08);
+    box-shadow: inset 0 0 8px rgba(181,154,90,.08);
 }
 
 button:hover {
-
     background: #2a261d;
-
     color: #d9bd70;
-
     border-color: #d4b66b;
-
     transform: scale(1.02);
-
-    box-shadow:
-        0 0 15px rgba(181,154,90,.15);
+    box-shadow: 0 0 15px rgba(181,154,90,.15);
 }
 
-
-/* =========================================
-   HOME BUTTONS
-========================================= */
-
+/* HOME BUTTONS */
 .home-button {
-
     padding: 16px;
-
     font-size: 19px;
-
     margin: 12px auto;
 }
 
-
-/* =========================================
-   MENU
-========================================= */
-
+/* MENU */
 .menu-category {
-
     margin-top: 25px;
-
     padding-bottom: 5px;
-
-    border-bottom:
-        1px solid rgba(181,154,90,.3);
+    border-bottom: 1px solid rgba(181,154,90,.3);
 }
 
 .menu-category h3 {
-
     margin-bottom: 15px;
-
     padding-bottom: 8px;
 }
 
 .menu-item {
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 3px;
-
     padding: 12px 5px;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.07);
-
+    border-bottom: 1px solid rgba(255,255,255,.07);
     font-size: 17px;
 }
 
 .menu-item:last-child {
-
     border-bottom: none;
 }
 
 .price {
-
     color: #d4b66b;
-
     direction: ltr;
-
     white-space: nowrap;
-
     font-family: Georgia, serif;
-
     font-size: 15px;
 }
 
-
-/* =========================================
-   SHELBY RECOMMENDATION
-========================================= */
-
+/* SHELBY RECOMMENDATION */
 .shelby-recommendation {
-
     color: #d4b66b;
-
     font-size: 14px;
-
     margin-top: 3px;
-
     padding: 2px 10px;
-
     border: 1px solid rgba(181,154,90,.4);
-
     background: rgba(181,154,90,.06);
-
     border-radius: 20px;
 }
 
-
-/* =========================================
-   BACK BUTTON
-========================================= */
-
+/* BACK BUTTON */
 .back-button {
-
     margin-top: 25px;
-
     width: 65%;
-
     font-size: 16px;
 }
 
-
-/* =========================================
-   INSTAGRAM
-========================================= */
-
+/* INSTAGRAM */
 .instagram-box {
-
     padding: 25px 10px;
 }
 
 .instagram-title {
-
     font-family: "Cinzel", serif;
-
     color: #d4b66b;
-
     font-size: 27px;
-
     margin-bottom: 10px;
 }
 
-
-/* =========================================
-   BUILDER
-========================================= */
-
+/* BUILDER */
 .question {
-
     color: #eee4c8;
-
     font-size: 23px;
-
     margin: 20px 0;
 }
 
 .progress {
-
     color: #9e906f;
-
     font-size: 14px;
-
     margin-bottom: 15px;
 }
 
-
-/* =========================================
-   RESULT
-========================================= */
-
+/* RESULT */
 .result-box {
-
     margin-top: 25px;
-
     padding: 20px;
-
-    border:
-        1px solid #a98d4f;
-
-    background:
-        rgba(181,154,90,.04);
+    border: 1px solid #a98d4f;
+    background: rgba(181,154,90,.04);
 }
 
 .result-title {
-
     color: #d4b66b;
-
     font-size: 27px;
 }
 
 .result-text {
-
     color: #ddd;
-
     font-size: 17px;
-
     line-height: 2;
 }
 
-
-/* =========================================
-   SECRET SHELBY
-========================================= */
-
+/* SECRET SHELBY */
 .secret-box {
-
     padding: 25px 10px;
 }
 
 .secret-title {
-
     font-family: "Cinzel", serif;
-
     color: #d4b66b;
-
     font-size: 30px;
-
     letter-spacing: 2px;
 }
 
 .secret-drink {
-
     font-size: 27px;
-
     color: #eee4c8;
-
     margin: 25px 0;
-
-    animation:
-        secretAppear .5s ease;
+    animation: secretAppear .5s ease;
 }
 
 @keyframes secretAppear {
-
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(10px);
+        transform: translateY(10px);
     }
-
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
-
-/* =========================================
-   FLOATING SECRET BUTTON
-========================================= */
-
+/* FLOATING SECRET BUTTON */
 .secret-floating {
-
     position: fixed;
-
     bottom: 20px;
-
     right: 20px;
-
     width: 58px;
     height: 58px;
-
     border-radius: 50%;
-
     padding: 0;
-
     margin: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-size: 27px;
-
-    background:
-        #111;
-
-    border:
-        1px solid #b59a5a;
-
-    box-shadow:
-        0 0 18px rgba(181,154,90,.25);
-
+    background: #111;
+    border: 1px solid #b59a5a;
+    box-shadow: 0 0 18px rgba(181,154,90,.25);
     z-index: 1000;
 }
 
 .secret-floating:hover {
-
     transform: scale(1.08);
-
     background: #201e19;
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
-
+/* FOOTER */
 .footer {
-
     margin-top: 35px;
-
     color: #777;
-
     font-size: 13px;
-
     font-family: Georgia, serif;
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
+/* MOBILE */
 @media (max-width: 500px) {
-
     .container {
-
         width: 94%;
-
         margin: 20px auto;
-
-        padding:
-            25px 14px 30px;
+        padding: 25px 14px 30px;
     }
 
     h1 {
-
         font-size: 31px;
     }
 
     h2 {
-
         font-size: 23px;
     }
 
     .menu-item {
-
         font-size: 15px;
-
         padding: 11px 2px;
     }
 
     .price {
-
         font-size: 14px;
     }
 
     button {
-
         width: 94%;
-
         font-size: 16px;
     }
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
 <div class="container">
-
     <div id="app"></div>
-
 </div>
 
-
-<!-- =========================================
-     FLOATING SECRET BUTTON
-========================================= -->
-
+<!-- FLOATING SECRET BUTTON -->
 <button
     class="secret-floating"
     onclick="showSecretDrink()"
     title="Secret Shelby">
-
     🎩
-
 </button>
-
 
 <script>
 
-/* =========================================
-   APP
-========================================= */
-
+/* APP */
 const app = document.getElementById("app");
 
-
-/* =========================================
-   HOME
-========================================= */
-
+/* HOME */
 function goHome() {
-
     app.innerHTML = `
-
         <h1>Cafe Shelby</h1>
 
         <div class="subtitle">
             به خانواده شلبی خوش آمدید
         </div>
 
-        <button
-            class="home-button"
-            onclick="startBuilder()">
-
+        <button class="home-button" onclick="startBuilder()">
             ☕ نوشیدنی خودت را بساز
-
         </button>
 
-
-        <button
-            class="home-button"
-            onclick="showMenuCategories()">
-
+        <button class="home-button" onclick="showMenuCategories()">
             📜 منوی کافه
-
         </button>
 
-
-        <button
-            class="home-button"
-            onclick="showInstagram()">
-
+        <button class="home-button" onclick="showInstagram()">
             📷 اینستاگرام کافه
-
         </button>
 
-
-        <button
-            class="home-button"
-            onclick="showSecretDrink()">
-
+        <button class="home-button" onclick="showSecretDrink()">
             🎩 Secret Shelby
-
         </button>
-
 
         <div class="footer">
-
             Cafe Shelby • Since 1920
-
         </div>
     `;
 }
 
-
-/* =========================================
-   INSTAGRAM
-========================================= */
-
+/* INSTAGRAM */
 function showInstagram() {
-
     app.innerHTML = `
-
         <div class="instagram-box">
-
             <div class="instagram-title">
                 Cafe Shelby
             </div>
@@ -660,253 +384,147 @@ function showInstagram() {
                 خانواده شلبی منتظر شماست.
             </p>
 
-            <button
-                onclick="openInstagram()">
-
+            <button onclick="openInstagram()">
                 📷 ورود به اینستاگرام
-
             </button>
 
-            <button
-                class="back-button"
-                onclick="goHome()">
-
+            <button class="back-button" onclick="goHome()">
                 ← بازگشت
-
             </button>
-
         </div>
     `;
 }
 
-
 function openInstagram() {
-
     window.open(
         "https://www.instagram.com/Shellbyscafe/",
         "_blank"
     );
 }
 
-
-/* =========================================
-   MENU DATA
-========================================= */
-
+/* MENU DATA */
 const menus = {
 
     espresso: {
-
         title: "اسپرسو بار",
-
         items: [
-
             ["اسپرسو ۷۰/۳۰ عربیکا", "120,000"],
-
             ["اسپرسو ۸۰/۲۰ روبوستا", "110,000"],
-
-            ["کرتادو", "145,475"],
-
-            ["آمریکانو", "164,450"],
-
-            ["کاپوچینو", "177,100"],
-
-            ["لاته", "202,400"],
-
-            ["لاته ماکیاتو", "271,975"]
-
+            ["کرتادو", "146,000"],
+            ["آمریکانو", "165,000"],
+            ["کاپوچینو", "178,000"],
+            ["لاته", "203,000"],
+            ["لاته ماکیاتو", "272,000"]
         ]
     },
-
 
     hot: {
-
         title: "گرم‌نوش",
-
         items: [
-
-            ["چای ماسالا", "172,500"],
-
-            ["چای کرک", "218,500"],
-
-            ["هات چاکلت", "195,500"]
-
+            ["چای ماسالا", "173,000"],
+            ["چای کرک", "219,000"],
+            ["هات چاکلت", "196,000"]
         ]
     },
-
 
     herbal: {
-
         title: "دمنوش",
-
         items: [
-
             ["ماچا لاته", "275,000"],
-
             ["چای ساده", "77,000"],
-
-            ["چای دارچین", "82,500"],
-
+            ["چای دارچین", "83,000"],
             ["کوئین بری", "99,000"],
-
-            ["پیچ بلک", "93,500"],
-
+            ["پیچ بلک", "94,000"],
             ["اپل پارادایس", "88,000"]
-
         ]
     },
-
 
     v60: {
-
         title: "قهوه دمی",
-
         items: [
-
             ["V60", "440,000"]
-
         ]
     },
-
 
     coffee: {
-
         title: "بر پایه قهوه",
-
         items: [
-
-            ["آیس آمریکانو", "170,775"],
-
-            ["آیس لاته", "208,725"],
-
-            ["آیس کارامل ماکیاتو", "309,925"],
-
+            ["آیس آمریکانو", "171,000"],
+            ["آیس لاته", "209,000"],
+            ["آیس کارامل ماکیاتو", "310,000"],
             ["پینا کافی", "276,000"],
-
-            ["پیچ کافی", "264,500"],
-
-            ["اوپی کافی", "287,500"]
-
+            ["پیچ کافی", "265,000"],
+            ["اوپی کافی", "288,000"]
         ]
     },
-
 
     shake: {
-
         title: "شیک و اسموتی",
-
         items: [
-
             ["شیک پینات", "407,000"],
-
             ["شیک لوتوس", "407,000"],
-
             ["چیز شیک", "330,000"],
-
             ["شیک شکلات", "330,000"],
-
             ["منگونیت", "407,000"],
-
-            ["دراگون بری", "425,700"]
-
+            ["دراگون بری", "426,000"]
         ]
     },
-
 
     mocktail: {
-
         title: "ماکتل",
-
         items: [
-
             ["شلبی", "440,000"],
-
             ["پیچ دراگون", "352,000"],
-
             ["بلوبار بری", "341,000"],
-
             ["موهیتو", "297,000"],
-
             ["لیموناد", "286,000"]
-
         ]
     },
-
 
     special: {
-
         title: "اسپشیال",
-
         items: [
-
             ["دالگونا", "297,000"],
-
             ["بلو کرما", "352,000"],
-
-            ["آیس ماچا", "280,500"]
-
+            ["آیس ماچا", "281,000"]
         ]
     },
 
-
     dessert: {
-
         title: "کیک و دسر",
-
         items: [
-
             ["ترامیسو توت‌فرنگی", "320,000"],
-
             ["ترامیسو شکلات", "330,000"],
-
             ["ترامیسو قهوه", "350,000"]
-
         ]
     }
 
 };
 
-
-/* =========================================
-   SHOW ALL MENU
-========================================= */
-
+/* SHOW ALL MENU */
 function showMenuCategories() {
 
     let html = `
-
         <h2>منوی کافه</h2>
 
         <div class="subtitle">
             انتخابی از خانواده شلبی
         </div>
-
     `;
-
 
     Object.values(menus).forEach(menu => {
 
-        // انتخاب تصادفی یک آیتم در هر دسته
-
         const recommendedIndex =
-            Math.floor(
-                Math.random() * menu.items.length
-            );
-
+            Math.floor(Math.random() * menu.items.length);
 
         html += `
-
             <div class="menu-category">
-
                 <h3>${menu.title}</h3>
-
         `;
-
 
         menu.items.forEach((item, index) => {
 
             html += `
-
                 <div class="menu-item">
 
                     <span>
@@ -926,44 +544,25 @@ function showMenuCategories() {
                     }
 
                 </div>
-
             `;
-
         });
 
-
         html += `
-
             </div>
-
         `;
-
     });
 
-
     html += `
-
-        <button
-            class="back-button"
-            onclick="goHome()">
-
+        <button class="back-button" onclick="goHome()">
             ← بازگشت به خانه
-
         </button>
-
     `;
-
 
     app.innerHTML = html;
 }
 
-
-/* =========================================
-   DRINK BUILDER
-========================================= */
-
+/* DRINK BUILDER */
 let builder = {
-
     base: "",
     mood: "",
     flavor: "",
@@ -972,18 +571,11 @@ let builder = {
     sweetness: "",
     topping: "",
     size: ""
-
 };
 
-
-/* =========================================
-   START BUILDER
-========================================= */
-
+/* START BUILDER */
 function startBuilder() {
-
     builder = {
-
         base: "",
         mood: "",
         flavor: "",
@@ -992,21 +584,14 @@ function startBuilder() {
         sweetness: "",
         topping: "",
         size: ""
-
     };
 
     chooseBase();
 }
 
-
-/* =========================================
-   QUESTION 1
-========================================= */
-
+/* QUESTION 1 */
 function chooseBase() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 1 از 8
         </div>
@@ -1014,7 +599,6 @@ function chooseBase() {
         <div class="question">
             امشب پایه‌ی نوشیدنی تو چیه؟
         </div>
-
 
         <button onclick="builder.base='قهوه'; chooseTemperature()">
             ☕ قهوه و اسپرسو
@@ -1032,25 +616,15 @@ function chooseBase() {
             🧊 یک نوشیدنی خنک
         </button>
 
-        <button
-            class="back-button"
-            onclick="goHome()">
-
+        <button class="back-button" onclick="goHome()">
             ← خروج
-
         </button>
     `;
 }
 
-
-/* =========================================
-   QUESTION 2
-========================================= */
-
+/* QUESTION 2 */
 function chooseTemperature() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 2 از 8
         </div>
@@ -1058,7 +632,6 @@ function chooseTemperature() {
         <div class="question">
             حال و هوای امشبت چطوره؟
         </div>
-
 
         <button onclick="builder.mood='گرم و صمیمی'; chooseFlavor()">
             🕯 گرم و صمیمی
@@ -1075,19 +648,12 @@ function chooseTemperature() {
         <button onclick="builder.mood='جسور و پرانرژی'; chooseFlavor()">
             🔥 جسور و پرانرژی
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 3
-========================================= */
-
+/* QUESTION 3 */
 function chooseFlavor() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 3 از 8
         </div>
@@ -1095,7 +661,6 @@ function chooseFlavor() {
         <div class="question">
             کدوم طعم بیشتر وسوست می‌کنه؟
         </div>
-
 
         <button onclick="builder.flavor='شکلات'; choosePersonality()">
             🍫 شکلات
@@ -1116,19 +681,12 @@ function chooseFlavor() {
         <button onclick="builder.flavor='مرکبات'; choosePersonality()">
             🍊 مرکبات
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 4
-========================================= */
-
+/* QUESTION 4 */
 function choosePersonality() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 4 از 8
         </div>
@@ -1136,7 +694,6 @@ function choosePersonality() {
         <div class="question">
             شخصیت نوشیدنی تو باید شبیه خودت باشه...
         </div>
-
 
         <button onclick="builder.personality='تلخ و مرموز'; chooseRisk()">
             🖤 تلخ و مرموز
@@ -1153,19 +710,12 @@ function choosePersonality() {
         <button onclick="builder.personality='ظریف و خاص'; chooseRisk()">
             ✨ ظریف و خاص
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 5
-========================================= */
-
+/* QUESTION 5 */
 function chooseRisk() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 5 از 8
         </div>
@@ -1173,7 +723,6 @@ function chooseRisk() {
         <div class="question">
             چقدر حاضری ریسک کنی؟
         </div>
-
 
         <button onclick="builder.risk='آشنا'; chooseSweetness()">
             🎩 همون چیز آشنا
@@ -1190,19 +739,12 @@ function chooseRisk() {
         <button onclick="builder.risk='شانس'; chooseSweetness()">
             🃏 همه‌چیز رو می‌سپارم به شانس
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 6
-========================================= */
-
+/* QUESTION 6 */
 function chooseSweetness() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 6 از 8
         </div>
@@ -1210,7 +752,6 @@ function chooseSweetness() {
         <div class="question">
             شیرینی نوشیدنی چقدر باشه؟
         </div>
-
 
         <button onclick="builder.sweetness='بدون شیرینی'; chooseTopping()">
             بدون شیرینی
@@ -1227,19 +768,12 @@ function chooseSweetness() {
         <button onclick="builder.sweetness='شیرین'; chooseTopping()">
             شیرین
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 7
-========================================= */
-
+/* QUESTION 7 */
 function chooseTopping() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 7 از 8
         </div>
@@ -1247,7 +781,6 @@ function chooseTopping() {
         <div class="question">
             آخرش چی روش باشه؟
         </div>
-
 
         <button onclick="builder.topping='خامه'; chooseSize()">
             🤍 خامه
@@ -1272,19 +805,12 @@ function chooseTopping() {
         <button onclick="builder.topping='هیچ‌چیز'; chooseSize()">
             بدون تاپینگ
         </button>
-
     `;
 }
 
-
-/* =========================================
-   QUESTION 8
-========================================= */
-
+/* QUESTION 8 */
 function chooseSize() {
-
     app.innerHTML = `
-
         <div class="progress">
             مرحله 8 از 8
         </div>
@@ -1292,7 +818,6 @@ function chooseSize() {
         <div class="question">
             سایزش چقدر باشه؟
         </div>
-
 
         <button onclick="builder.size='کوچک'; showResult()">
             کوچک
@@ -1305,25 +830,17 @@ function chooseSize() {
         <button onclick="builder.size='بزرگ'; showResult()">
             بزرگ
         </button>
-
     `;
 }
 
-
-/* =========================================
-   BUILDER RESULT
-========================================= */
-
+/* BUILDER RESULT */
 function showResult() {
-
     app.innerHTML = `
-
         <div class="result-box">
 
             <div class="result-title">
                 نوشیدنی تو آماده‌ست 🎩
             </div>
-
 
             <div class="result-text">
 
@@ -1376,128 +893,76 @@ function showResult() {
 
             </div>
 
-
-            <button
-                onclick="startBuilder()">
-
+            <button onclick="startBuilder()">
                 🔄 دوباره بساز
-
             </button>
 
-
-            <button
-                onclick="goHome()">
-
+            <button onclick="goHome()">
                 ← بازگشت به خانه
-
             </button>
 
         </div>
-
     `;
 }
 
-
-/* =========================================
-   SECRET DRINKS
-========================================= */
-
+/* SECRET DRINKS */
 const secretDrinks = [
-
     "آیس منگو 🥭",
-
     "اورنج کافی 🍊☕",
-
     "گرین وی 🍃",
-
     "شوکوبری 🍫🍓",
-
     "گرانابل 🍎",
-
     "آفوگاتو ☕🍨",
-
     "شیک پسته 💚",
-
     "فراپاچینو 🧊☕",
-
     "جلی بری 🍓",
-
     "جینجر کوکونات 🥥",
-
     "استرانیت ✨"
-
 ];
 
-
-/* =========================================
-   SECRET DRINK
-========================================= */
-
+/* SECRET DRINK */
 function showSecretDrink() {
 
     const randomIndex =
-        Math.floor(
-            Math.random() *
-            secretDrinks.length
-        );
+        Math.floor(Math.random() * secretDrinks.length);
 
-    const drink =
-        secretDrinks[randomIndex];
-
+    const drink = secretDrinks[randomIndex];
 
     app.innerHTML = `
-
         <div class="secret-box">
 
             <div class="secret-title">
                 SECRET SHELBY
             </div>
 
-
             <p>
                 یک آیتم مخفی برای تو انتخاب شد...
             </p>
-
 
             <div class="secret-drink">
                 ${drink}
             </div>
 
-
             <p>
                 این یکی توی منوی معمولی نیست.
             </p>
 
-
-            <button
-                onclick="showSecretDrink()">
-
+            <button onclick="showSecretDrink()">
                 🎲 یکی دیگه
-
             </button>
 
-
-            <button
-                onclick="goHome()">
-
+            <button onclick="goHome()">
                 ← بازگشت
-
             </button>
 
         </div>
-
     `;
 }
 
-
-/* =========================================
-   START
-========================================= */
-
+/* START */
 goHome();
 
 </script>
 
 </body>
-
 </html>
